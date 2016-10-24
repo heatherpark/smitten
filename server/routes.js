@@ -24,10 +24,10 @@ module.exports = function (app, express){
   app.put('/api/posts/:id', postRequestHandler.updatePost);
 
   /** mixtape **/
-  app.post('/api/add-song', mixtapeRequestHandler.addToPlaylist);
-  app.post('/api/get-playlist', mixtapeRequestHandler.getPlaylist);
+  app.put('/api/add-song', mixtapeRequestHandler.addToPlaylist);
+  app.get('/api/get-playlist', mixtapeRequestHandler.getPlaylist);
   app.post('/api/soundcloud-search', mixtapeRequestHandler.searchSoundCloud);
-  app.post('/api/delete-song', mixtapeRequestHandler.deleteSong);
+  app.delete('/api/delete-song', mixtapeRequestHandler.deleteSong);
 
   /** sentiment **/
   app.get('/api/sentiment', sentimentRequestHandler.sendBackData);

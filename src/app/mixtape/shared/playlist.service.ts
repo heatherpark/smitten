@@ -9,14 +9,14 @@ export class PlaylistService {
   constructor(private apiService: ApiService) {}
 
   addToPlaylist(songData) {
-    return this.apiService.post('/api/add-song', songData);
+    return this.apiService.put('/api/add-song', songData);
   }
 
   deleteSong(songData) {
-    return this.apiService.post('/api/delete-song', songData);
+    return this.apiService.delete('/api/delete-song', songData);
   }
 
   getPlaylist() {
-    return this.apiService.post('/api/get-playlist', {});
+    return this.apiService.get('/api/get-playlist');
   }
 }
