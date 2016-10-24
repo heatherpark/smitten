@@ -1,5 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import 'rxjs/Rx';
+import { Component, OnInit } from '@angular/core';
 
 import { SearchParams } from './index';
 import { SearchSoundCloud } from '../search.service';
